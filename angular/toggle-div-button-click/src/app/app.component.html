@@ -1,0 +1,7 @@
+<h1>Toggle a Div on Button Click</h1>
+
+<button (click)="toggleDisplayDiv()">Toggle Display Div</button>
+
+<!-- <div [hidden]="isShowDiv"> This is a DIV dynamically Show / Hide </div> -->
+
+<div *ngIf="!isShowDiv">This is a DIV dynamically Show / Hide</div>

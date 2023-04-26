@@ -1,0 +1,41 @@
+-> What is Typescript?
+	- Typescript is a syntactic superset of Javascript which adds 'Static Typing'
+-> Why?
+	- Javascript is a loosely typed language. 
+	- Function parameters and variables don't have any information
+	- TS allows specifying the types of data
+
+-> Env., Setup of Typescript
+	nodejs
+	core package
+	npm package
+
+	> npm install -g typescript
+	> npx tsc --init
+
+-> Created a Sample Program
+-> Simple Types:
+	- boolean: true / false
+	- number: 0 - 9; 63, -642, 53.43
+	- string: a - z, A - Z, 0 - 9; ' ... ' / " ... "
+
+-> Type Assignment:
+	- Creating a Variable, we have 2 main Types:
+		1. Explicit
+		2. Implicit
+
+	- Explicit: 
+	let firstName: string = "jou";
+
+-> Special Types;
+	- any
+	- unknown
+	- never
+	- null
+	- undefined
+
+-> Arrays:
+-> Tuples & Name Tuples & Readonly & DeStructured
+-> Inference
+-> Object 
+

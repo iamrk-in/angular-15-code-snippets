@@ -1,0 +1,70 @@
+<p>click - event-binding!</p>
+<button type="button" (click)="onShow()" class="btn btn-secondary">Show</button>
+
+<hr />
+
+<p>click - event-binding!</p>
+<button type="button" (click)="clickMe()" class="btn btn-secondary">Click Me</button>
+<p>clickCount: {{clickCount}}</p>
+
+<hr />
+
+<p>multiple - event-binding!</p>
+<button type="button" class="btn btn-secondary" (click)="clickMe2(); clickCount2 = clickCount">Multiple Clicking Events</button>
+<p>You have clicked: {{clickCount}}</p>
+<p>You have clicked: {{clickCount2}}</p>
+
+<hr />
+
+<p>event binding</p>
+<input (input)="handleInput($event)" />
+<p>You have entered: {{value}}</p>
+
+<hr />
+
+<!-- template reference variable: we can also make use of the template reference variable to pass the value instead of $event -->
+<p>template reference variable</p>
+<input #el (input)="handleInput1(el)" />
+<p>You have entered: {{value}}</p>
+
+<hr />
+
+<!-- key event filtering (with key enter) -->
+<p>key event filtering (with key enter)</p>
+<input (keyup)="value = $any($event.target).value" />
+<p>You have entered: {{value}}</p>
+
+<hr />
+
+<p>defined button and added a function</p>
+
+<div>
+    <h1>Welcome to {{title}}</h1>
+</div>
+
+<div>
+    Months: 
+    <select>
+        <option *ngFor="let i of months">{{i}}</option>
+    </select>
+</div>
+
+<hr />
+
+<div>
+    <span *ngIf="isAvailable; then condition1 else condition2">condition is valid!!</span>
+    <ng-template #condition1>condition is valid!!</ng-template>
+    <ng-template #condition2>condition is invalid!!</ng-template>
+</div>
+
+<p>Change Event to Dropdown</p>
+
+<div>
+    Months: 
+    <select (change)="changeMonths($event)">
+        <option *ngFor="let i of months">{{i}}</option>
+    </select>
+</div>
+
+<p>Change month Value: {{changeMonthValue}}</p>
+

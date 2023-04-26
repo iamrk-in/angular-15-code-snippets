@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e4f0ff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 12px;
+    grid-template-areas: 
+        "header header header" 
+        "nav content side" 
+        "footer footer footer";
+    height: 100vh;
+}
+
+app-header {
+    color: #fff;
+    font-size: 14px;
+    grid-area: header;
+    text-align: center;
+    background-color: #fa7;
+}
+
+app-nav {
+    grid-area: nav;
+    margin-left: 0.5rem;
+    background-color: #2a9;
+}
+
+app-home, 
+app-privacy-policy {
+    grid-area: content;
+    background-color: #fafce6;
+}
+
+app-aside {
+    grid-area: side;
+    margin-right: 0.5rem;
+}
+
+app-footer {
+    grid-area: footer;
+    background-color: #fa7;
+}
+
+ul li {
+    color: #fff;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+    app-nav, 
+    app-aside {
+        margin: 0;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "content"
+            "side"
+            "footer"
+        ;
+        grid-template-rows: auto minmax(60px, auto) 1fr minmax(70px, auto) auto;
+    }
+}

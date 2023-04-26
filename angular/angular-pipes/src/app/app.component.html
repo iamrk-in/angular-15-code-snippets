@@ -1,0 +1,26 @@
+<p>Unformatted Date: {{toDate}}</p>
+    <p>Formatted Date: {{toDate | date: 'medium'}}</p>
+    <p>Formatted Date: {{toDate | date: 'fullDate'}}</p>
+    <p>Formatted Username: {{userName | lowercase}}</p>
+    <p>Unformatted Msg: {{msg}}</p>
+    <p>Formatted Msg: {{msg | slice: 11:13}}</p>
+    <p>Number: {{num | number}}</p>
+    <p>Number: {{num | number:'3.3'}}</p>
+    <p>Number: {{num | number:'4.2-3'}}</p>
+    <p>Per: {{per}}</p>
+    <p>Per: {{per | percent:'1.2'}}</p>
+    <p>Cur: {{cur | currency}}</p>
+    <p>Cur: {{cur | currency:'INR'}}</p>
+
+    <div>
+  <h4>Farenhiet to Celcius</h4>
+  <p>Farenhiet: <input type="text" [(ngModel)]="Farenhiet" /></p>
+  Celcius: {{Farenhiet | exampleConverter: 'C'}}
+</div>
+
+
+<div>
+  <h4>Celcius to Farenhiet</h4>
+  <p>Celcius: <input type="text" [(ngModel)]="Celcius" /></p>
+  Celcius: {{Celcius | exampleConverter: 'F'}}
+</div>

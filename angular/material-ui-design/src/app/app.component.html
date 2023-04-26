@@ -1,0 +1,21 @@
+<h1>Material Design with Module </h1>
+
+<form class="materialui-example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name;</mat-label>
+    <input matInput placeholder="eg., hardik" value="" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Address;</mat-label>
+    <textarea matInput placeholder="eg., "></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker" placeholder="choose any date" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Submit!</button>
+</form>

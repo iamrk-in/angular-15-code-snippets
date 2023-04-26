@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Modal Popup Bootstrap</h1>
+
+      <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open Modal Box</button>
+
+      <ng-template #mymodal let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross Click')">
+            <span aria-hidden="true">x</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          This is an example to Open Modal Box
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save Click')">Ok</button>
+        </div>        
+      </ng-template>
+    </div>
+  </div>
+</div>
