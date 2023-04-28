@@ -1,1 +1,26 @@
-<p>view works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>View Post</h1>
+
+            <hr />
+
+            <a href="#" class="btn btn-primary" routerLink="/post/index">Go Back</a>
+
+            <div>
+                <strong>ID:</strong>
+                <p>{{post.id}}</p>
+            </div>
+
+            <div>
+                <strong>Title:</strong>
+                <p>{{post.title}}</p>
+            </div>
+
+            <div>
+                <strong>Body:</strong>
+                <p>{{post.body}}</p>
+            </div>
+        </div>
+    </div>
+</div>
