@@ -1,1 +1,1 @@
-# sageit-angular-training
+# angular-15-code-snippets
